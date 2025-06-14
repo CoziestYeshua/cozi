@@ -1,0 +1,378 @@
+#volume-control:hover + #logout-button,
+#logout-button:hover {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#logout-button:hover {
+    transform: scale(1.1);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: #000;
+    color: #fff;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+#bg-video, #bg-image {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    filter: blur(2px);
+}
+
+.discord-username, .display-intro {
+    font-size: 2.5em;
+    letter-spacing: 1px;
+    margin: 5px 0;
+    background: linear-gradient(to left, #000000e9 0%, #fff 50%, #000000e9 70%);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s linear infinite;
+    text-shadow: 0 0 20px rgba(248, 248, 248, 0.3);
+    text-align: center;
+}
+
+#typed-text {
+    font-weight: 1000;
+    font-size: 1.1em;
+    margin: 8px 0;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 90%;
+    text-align: center;
+    /* Animation for "coziest" text */
+    animation: cozy-fade-in 2s ease-out forwards; /* FIX: Added animation property */
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    backdrop-filter: blur(8px);
+    padding: 1.5rem;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.profile-pic-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 15px;
+}
+
+.discord-profile-pic {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.discord-profile-pic:hover {
+    transform: scale(1.05);
+}
+
+.profile-decoration {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    top: -16px;
+    left: -14px;
+    z-index: 2;
+    pointer-events: none;
+    -webkit-user-drag: none;
+    /* Adjusted from inline style for better CSS management */
+    width: 138px;
+    height: 130px;
+    top: -10px;
+    left: -1px;
+    object-fit: cover;
+    margin-left: -11px;
+}
+
+.display-name-container {
+    position: relative;
+    display: inline-block;
+}
+
+.display-name {
+    position: relative;
+    z-index: 0;
+}
+
+.sparkle-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    mix-blend-mode: multiply;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    filter: invert(100%);
+}
+
+.social-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.social-icon {
+    color: #fefefee9;
+    font-size: 37px;
+    filter: drop-shadow(0 0 5px #ffffffe9);
+    transition: transform 0.3s;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    color: white;
+}
+
+#enterzxc {
+    position: fixed;
+    inset: 0;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    cursor: pointer;
+    transition: opacity 0.5s ease;
+}
+
+#enterzxc p {
+    font-weight: 600;
+    font-size: 2em;
+    text-align: center;
+    padding: 0 20px;
+}
+
+#volume-control {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    border-radius: 15px;
+}
+
+#volume-icon {
+    color: #ffffffe9;
+    font-size: 24px;
+    cursor: pointer;
+    filter: drop-shadow(0 0 5px #ffffffe9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#volume-slider {
+    height: 4px;
+    width: 0;
+    opacity: 0;
+    background: #5e5a5a;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s ease;
+    -webkit-appearance: none;
+}
+
+#volume-control:hover #volume-slider {
+    width: 100px;
+    opacity: 1;
+}
+
+#volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #ffffffe9;
+    border-radius: 50%;
+    cursor: pointer;
+    filter: drop-shadow(0 0 5px #ffffffe9);
+}
+
+.discord-presence {
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    max-width: 300px;
+    width: 90%;
+    margin: 12px auto;
+}
+
+#discord-activity-image {
+    width: 140px;
+    height: 100px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+#discord-activity-details {
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 500;
+    white-space: pre-line;
+    width: 100%;
+}
+
+.discord-activity:empty, .discord-presence:empty, .discord-presence.no-activity {
+    display: none;
+}
+
+.elapsed-time {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+    font-style: italic;
+    margin-top: 4px;
+}
+
+.spotify-progress {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #b3b3b3;
+    width: 100%;
+    gap: 5px;
+}
+
+.time-elapsed, .time-total {
+    flex-shrink: 0;
+    min-width: 35px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.progress-container {
+    flex-grow: 1;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #1DB954;
+    border-radius: 3px;
+    transition: width 1s linear;
+}
+
+#visitor-count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+#visitor-count .eye-icon {
+    color: white;
+    font-size: 16px;
+    animation: blink 3s infinite;
+}
+
+#visitor-count .count-number {
+    font-weight: bold;
+}
+
+.snow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.flake {
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 2px rgba(255,255,255,.8);
+}
+
+@keyframes shine {
+    0% { background-position: 150%; }
+    100% { background-position: -50%; }
+}
+
+@keyframes blink {
+    0%, 100%, 40% { opacity: 1; }
+    50% { opacity: 0.1; }
+    60% { opacity: 1; }
+}
+
+@keyframes fall {
+    0% { transform: translateY(0) rotate(0); }
+    to { transform: translateY(100vh) translateX(var(--x)) rotate(180deg); }
+}
+
+/* FIX: Added the animation keyframes for the "coziest" effect */
+@keyframes cozy-fade-in {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .profile-pic-container { width: 120px; height: 120px; }
+    .profile-decoration { width: 150px; height: 150px; top: -15px; left: -15px; }
+    .display-name { font-size: 2em; }
+    #typed-text { font-size: 1em; }
+    .social-icon { font-size: 30px; }
+}
+
+@media screen and (max-width: 480px) {
+    .profile-pic-container { width: 100px; height: 100px; }
+    .profile-decoration { width: 130px; height: 130px; }
+    .display-name { font-size: 1.8em; }
+    #typed-text { font-size: 0.9em; }
+    .social-icon { font-size: 28px; }
+    #enterzxc p { font-size: 1.5em; }
+    #volume-control { top: 10px; left: 10px; }
+    .discord-presence { max-width: 250px; }
+    #discord-activity-image { width: 120px; height: 85px; }
+}
+
+@media screen and (max-height: 600px) {
+    .profile-container { padding: 1rem; }
+    .profile-pic-container { margin-bottom: 10px; }
+    #typed-text { margin: 5px 0; }
+}

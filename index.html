@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yeshua's personal profile: exploring digital landscapes, music, and cozy vibes.">
+    <meta name="keywords" content="Yeshua, profile, discord, spotify, social media, personal website, developer, cozy, music, gaming">
+    <meta name="author" content="Yeshua">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com/">
+    <meta property="og:title" content="Yeshualuvsu - Cozy Digital Space">
+    <meta property="og:description" content="Welcome to Yeshua's personal corner of the internet.">
+    <meta property="og:image" content="d867f3789dd7f97b7883277ccd15e6bb.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourwebsite.com/">
+    <meta property="twitter:title" content="Yeshualuvsu - Cozy Digital Space">
+    <meta property="twitter:description" content="Welcome to Yeshua's personal corner of the internet.">
+    <meta property="twitter:image" content="d867f3789dd7f97b7883277ccd15e6bb.jpg">
+    <title>Yeshualuvsu</title>
+
+    <link rel="icon" href="d867f3789dd7f97b7883277ccd15e6bb.jpg" type="image/jpeg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <video id="bg-video" autoplay loop muted playsinline>
+        <source src="gangnem.mp4" type="video/mp4">
+    </video>
+
+    <audio id="bg-audio" loop>
+        <source src="911 - Gat Putch, Tu$ Brother$, Wing Goods, Sica, HELLMERRY & SUPAFLY (Official Music Video).mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="enterzxc">
+        <p class="display-intro">click to enter</p>
+    </div>
+
+    <main class="profile-page-content">
+        <div class="profile-container">
+            <div class="profile-pic-container">
+                <img class="discord-profile-pic" src="d867f3789dd7f97b7883277ccd15e6bb.jpg?size=128" alt="Profile" draggable="false">
+            </div>
+            <div class="display-name-container">
+                <h1 class="discord-username">808.Yeshua</h1>
+                <img src="sparkle_white.gif" class="sparkle-overlay" alt="Sparkle effect">
+            </div>
+            <p id="typed-text">Coziest</p>
+            <div class="social-links">
+                <a href="hhttps://discord.gg/ReKWBk4Prc" class="social-icon" aria-label="Discord"><i class="bx bxl-discord"></i></a>
+                <a href="https://www.instagram.com/coziest_yeshie/" class="social-icon" aria-label="Instagram"><i class="bx bxl-instagram-alt"></i></a>
+                <a href="https://www.tiktok.com/@itsyourboixena" class="social-icon" aria-label="TikTok"><i class="bx bxl-tiktok"></i></a>
+            </div>
+            <div id="visitor-count">
+                <i class="bx bx-show"></i>
+                <span id="view-count-number">83</span>
+            </div>
+        </div>
+
+        <div class="discord-presence">
+            <img id="discord-activity-image" style="display: none;" alt="Discord Activity">
+            <div id="discord-activity-details"></div>
+        </div>
+    </main>
+
+    <div id="volume-control">
+        <i class="bx bxs-volume-full" id="volume-icon"></i>
+        <input type="range" id="volume-slider" min="0" max="100" value="100">
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="script.js"></script>
+
+    <style>
+
+
+/* Custom cursor for normal interaction */
+body {
+    cursor: url(Normal.cur) 16 16, auto;
+}
+
+/* Custom pointing cursor for interactive elements */
+a, button, input[type="range"], #enterzxc, #volume-icon, .social-icon {
+    cursor: url(Link.cur) 16 16, pointer !important; /* !important ensures it overrides the body cursor */
+}
+
+/* Add any other elements you want to have the pointing cursor on hover */
+/* Example: .your-clickable-div { cursor: url(Pointer.cur) 16 16, pointer !important; } */
+
+    </style>
+</body>
+</html>
